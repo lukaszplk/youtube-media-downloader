@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-media-downloader"
+version = "1.0.0"
+authors = [
+    {name = "lukaszplk", email = "lpolowski@protonmail.com"}
+]
+description = "Enhanced CLI tool for downloading videos and audio from YouTube"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["youtube", "downloader", "video", "audio", "cli", "pytube"]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Multimedia :: Video",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pytube>=15.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/lukaszplk/youtube-media-downloader"
+"Bug Reports" = "https://github.com/lukaszplk/youtube-media-downloader/issues"
+"Source" = "https://github.com/lukaszplk/youtube-media-downloader"
+"Release Notes" = "https://github.com/lukaszplk/youtube-media-downloader/releases"
+
+[project.scripts]
+youtube-downloader = "youtube_media_downloader.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["youtube_media_downloader*"]

@@ -13,7 +13,17 @@ A Python tool to download YouTube videos or audio with comprehensive logging.
 
 ## Installation
 
+### Option 1: Install from PyPI (Recommended)
+
 ```bash
+pip install youtube-media-downloader
+```
+
+### Option 2: Install from Source
+
+```bash
+git clone https://github.com/lukaszplk/youtube-media-downloader.git
+cd youtube-media-downloader
 pip install -r requirements.txt
 ```
 
@@ -31,13 +41,21 @@ https://www.youtube.com/watch?v=9bZkp7q19f0
 ### Download Videos (Default)
 
 ```bash
-python main.py
+# If installed from PyPI
+youtube-downloader
+
+# If running from source
+python -m youtube_media_downloader.main
 ```
 
 ### Download Audio Only
 
 ```bash
-python main.py --mode audio
+# If installed from PyPI
+youtube-downloader --mode audio
+
+# If running from source
+python -m youtube_media_downloader.main --mode audio
 ```
 
 ### Download Lowest Quality Video
@@ -49,7 +67,7 @@ python main.py --mode video --quality lowest
 ### Use Custom Source File
 
 ```bash
-python main.py --source my_urls.txt
+youtube-downloader --source my_urls.txt
 ```
 
 ## Output Structure

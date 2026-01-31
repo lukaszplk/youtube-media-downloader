@@ -1,0 +1,6 @@
+# Include package data
+include README.md
+include LICENSE
+include requirements.txt
+include source.txt
+include RELEASE_NOTES.md
